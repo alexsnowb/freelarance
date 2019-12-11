@@ -40,6 +40,28 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="form-control m-bot15" name="role">
+                                    @if ($roleList->count())
+
+                                        @foreach($roleList as $role)
+                                            <option value="{{ $role->slug }}">{{ $role->name }}</option>
+                                        @endforeach
+
+                                    @endif
+                                </select>
+
+                                @error('role')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

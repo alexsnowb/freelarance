@@ -3,6 +3,7 @@
 use App\Role;
 use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class AclDataSeeder extends Seeder
 {
@@ -34,7 +35,7 @@ class AclDataSeeder extends Seeder
         $adminUser = new User();
         $adminUser->name = 'Admin';
         $adminUser->email = 'admin@example.org';
-        $adminUser->password = bcrypt('admin');
+        $adminUser->password = Hash::make('admin');
         $adminUser->save();
 
         $adminUser->assignRole($roleAdmin);
