@@ -40,6 +40,33 @@ namespace App{
 
 namespace App{
 /**
+ * App\Task
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $description
+ * @property int $ownerId
+ * @property int|null $freelancerId
+ * @property string $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereFreelancerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereOwnerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Task whereUpdatedAt($value)
+ */
+	class Task extends \Eloquent {}
+}
+
+namespace App{
+/**
  * App\User
  *
  * @property int $id
